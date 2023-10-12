@@ -3,6 +3,11 @@
     <h1>
       <%= @the_board.name %>
     </h1>
+    <div>
+      <% matching_user = User.where({ :id => @the_board.user_id })%>
+      <% the_user = matching_user.first %>
+      Owner: <%= the_user.email%>
+    </div>
   </div>
 </div>
 
